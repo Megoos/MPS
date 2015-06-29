@@ -46,7 +46,7 @@ void UpdateClock()
 
 volatile int count;
 volatile int safety;
-//таймер
+//С‚Р°Р№РјРµСЂ
 #INT_TIMER1
 void TimerOverflow() 
 {
@@ -105,9 +105,9 @@ void main()
    
 
 /*set_tris_b((0b11111000));
-//TRISB=0b11111000;            // RB0, RB1 и RB2 на выход, остальные на вход
+//TRISB=0b11111000;            // RB0, RB1 Рё RB2 РЅР° РІС‹С…РѕРґ, РѕСЃС‚Р°Р»СЊРЅС‹Рµ РЅР° РІС…РѕРґ
 output_b((0b00000000));
-//PORTB=0b00000000;           // Устанавливаем на выходах нули
+//PORTB=0b00000000;           // РЈСЃС‚Р°РЅР°РІР»РёРІР°РµРј РЅР° РІС‹С…РѕРґР°С… РЅСѓР»Рё
 INTCON=0b10001000;*/
 
 
@@ -122,7 +122,7 @@ INTCON=0b10001000;*/
    char str3[] = "Lap2:    N/A    ";
    LCD_SendString(str3,16);
    LCD_GotoXY(0,3);
-   char str4[] = "Cтрока          ";
+   char str4[] = "CС‚СЂРѕРєР°          ";
    LCD_SendString(str4,16);
    LCD_NewItem();
    LCD_GotoXY(14,3);

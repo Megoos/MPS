@@ -77,7 +77,7 @@ uint8_t get_port()
 
 static uint8_t lcd_rus(uint8_t);
 
-//таблица перекодировки в русские символы.
+//С‚Р°Р±Р»РёС†Р° РїРµСЂРµРєРѕРґРёСЂРѕРІРєРё РІ СЂСѓСЃСЃРєРёРµ СЃРёРјРІРѕР»С‹.
 static const unsigned char convert_HD44780[64] =
 {
    0x41,0xA0,0x42,0xA1,0xE0,0x45,0xA3,0xA4,

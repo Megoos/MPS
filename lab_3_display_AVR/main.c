@@ -30,7 +30,7 @@ MEMO:
 volatile int H[3] = {0,0,0};
 volatile int M[3] = {0,0,0};
 volatile int S[3] = {0,0,0};
-//вывод времени в i-ую линию
+//РІС‹РІРѕРґ РІСЂРµРјРµРЅРё РІ i-СѓСЋ Р»РёРЅРёСЋ
 void Output(int i)
 {
 	char str[8];
@@ -62,7 +62,7 @@ void UpdateClock()
 
 volatile int count;
 volatile int safety;
-//таймер
+//С‚Р°Р№РјРµСЂ
 ISR(TIMER1_COMPA_vect)
 {
 
@@ -107,7 +107,7 @@ ISR(INT1_vect)
 
 int main()
 {	
-	LCD_PORT = 0xFF;			//Порт А как выход. Исходное состояние 0хFF
+	LCD_PORT = 0xFF;			//РџРѕСЂС‚ Рђ РєР°Рє РІС‹С…РѕРґ. РСЃС…РѕРґРЅРѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ 0С…FF
 	LCD_DDR = 0xFF;
 	
 	S[0]=0;	M[0]=0;
@@ -137,7 +137,7 @@ int main()
 	LCD_GotoXY(0,2);
 	LCD_SendString("Lap2:    N/A    ",16);
 	LCD_GotoXY(0,3);
-	LCD_SendString("Гуськов М.Е.:   ",16);
+	LCD_SendString("Р“СѓСЃСЊРєРѕРІ Рњ.Р•.:   ",16);
 	LCD_NewItem();
 	LCD_GotoXY(14,3);
 	LCD_SendChar(0x01);

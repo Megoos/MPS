@@ -4,7 +4,7 @@
 	#include <avr/io.h>
 	#include <util/delay.h>
 	#include <avr/pgmspace.h>
-	//#define F_CPU 8000000
+	
 #else
 	#include <16F877A.h>
 	#use delay(clock=1000000)		
@@ -77,7 +77,7 @@ uint8_t get_port()
 
 static uint8_t lcd_rus(uint8_t);
 
-//С‚Р°Р±Р»РёС†Р° РїРµСЂРµРєРѕРґРёСЂРѕРІРєРё РІ СЂСѓСЃСЃРєРёРµ СЃРёРјРІРѕР»С‹.
+//таблица перекодировки в русские символы.
 static const unsigned char convert_HD44780[64] =
 {
 	0x41,0xA0,0x42,0xA1,0xE0,0x45,0xA3,0xA4,
@@ -94,11 +94,11 @@ static const unsigned char convert_HD44780[64] =
 void pLCD_SendNibble(uint8_t Nibble)
 {
 	pSET_E();
-	_delay_us(8);	// 8us
+	_delay_us(8);	
 	set_port(get_port()&0b00001111);
 	set_port(get_port()|(Nibble&0b11110000));
 	pCLR_E();
-	_delay_us(40);	// 40 us
+	_delay_us(40);	
 }
 
 //CP
