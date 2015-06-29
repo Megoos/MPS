@@ -130,8 +130,8 @@ void main() {
    
    //char text0[11] = { 0xF0, 0x0F, 0xF0, 0x0F, 0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0xAA};
    
-   char* text2 = " Солнышкина ";
-   char* text1 = "Звездочкина ";
+   char* text2 = " РЎРѕР»РЅС‹С€РєРёРЅР° ";
+   char* text1 = "Р—РІРµР·РґРѕС‡РєРёРЅР° ";
    
    output_c(0x00);
    int8  flag= 0;

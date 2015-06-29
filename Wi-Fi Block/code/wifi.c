@@ -1,5 +1,5 @@
 
-#define F_CPU 8000000UL	//	рабочая частота
+#define F_CPU 8000000UL	//	СЂР°Р±РѕС‡Р°СЏ С‡Р°СЃС‚РѕС‚Р°
 
 
 #include <avr/io.h>
@@ -46,7 +46,7 @@ void main(void)
 	LCD_Clear();
 
 					
-	init_UART();					//	инициализация UART
+	init_UART();					//	РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ UART
 	sei();
 	_delay_ms(1000);				
 
@@ -73,7 +73,7 @@ void main(void)
                     {
                         send_Uart_str(condition); // check
                         read_uart(serial);
-                        if (serial[6] == '2') // если подключены к соккету
+                        if (serial[6] == '2') // РµСЃР»Рё РїРѕРґРєР»СЋС‡РµРЅС‹ Рє СЃРѕРєРєРµС‚Сѓ
                         {	
 									
                             PORTB |= (1 << 7);
@@ -98,7 +98,7 @@ void main(void)
 								}
                             }
                         }
-                        else // если не подключены к разьему
+                        else // РµСЃР»Рё РЅРµ РїРѕРґРєР»СЋС‡РµРЅС‹ Рє СЂР°Р·СЊРµРјСѓ
                         {
                             PORTB |= (1 << 5);
                             PORTB &= ~(1 << 7);                            

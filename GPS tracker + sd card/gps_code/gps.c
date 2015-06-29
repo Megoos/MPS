@@ -1,5 +1,5 @@
 
-#define F_CPU 8000000UL	//	рабочая частота
+#define F_CPU 8000000UL	//	СЂР°Р±РѕС‡Р°СЏ С‡Р°СЃС‚РѕС‚Р°
 
 #include <avr/io.h>
 #include <util/delay.h>
@@ -114,13 +114,13 @@ void main(void)
 
 	_delay_ms(1000);
 					
-	init_UART();					//	инициализация UART
+	init_UART();					//	РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ UART
 	sei();
 	_delay_ms(1000);				
 
 	
-	//send_int_Uart(2013);			//	отправка числа
-	//	send_Uart(13);				//	перенос строки
+	//send_int_Uart(2013);			//	РѕС‚РїСЂР°РІРєР° С‡РёСЃР»Р°
+	//	send_Uart(13);				//	РїРµСЂРµРЅРѕСЃ СЃС‚СЂРѕРєРё
 	PORTB |= (1 << 2);
     while(1)						
     {		        

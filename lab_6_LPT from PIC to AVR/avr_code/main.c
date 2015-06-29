@@ -76,14 +76,14 @@ ISR(INT2_vect) {
 			LCD_SendString(ex, 16);
 
 			LCD_GotoXY(0, 3);
-			LCD_SendString("Получил!        ", 16);
+			LCD_SendString("РџРѕР»СѓС‡РёР»!        ", 16);
 		}	
 		
 }
 
 int main() {
 
-	LCD_PORT = 0xFF;	//Порт А как выход. Исходное состояние 0хFF
+	LCD_PORT = 0xFF;	//РџРѕСЂС‚ Рђ РєР°Рє РІС‹С…РѕРґ. РСЃС…РѕРґРЅРѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ 0С…FF
 	LCD_DDR = 0xFF;
 	Init();
 	LCD_Init(&LCD_PORT,&LCD_DDR);
@@ -96,7 +96,7 @@ int main() {
 
 	GICR = (1<<INT2);
 	MCUCR = (0<<ISC2);
-	char* ready = "Готов!          ";
+	char* ready = "Р“РѕС‚РѕРІ!          ";
 	LCD_GotoXY(0, 0);
 	LCD_SendString(ready, 16);
 		
